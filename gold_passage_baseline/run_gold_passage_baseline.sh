@@ -38,7 +38,7 @@ python $BERT_CODE_DIR/run_squad.py \
   --train_file="${TYDIQA_GOLDP_DIR}/tydiqa-goldp-train-${VERSION}.json" \
   --do_predict=True \
   --predict_file="${TYDIQA_GOLDP_DIR}/tydiqa-goldp-dev-${VERSION}.json" \
-  --train_batch_size=12 \
+  --train_batch_size=2 \
   --learning_rate=3e-5 \
   --num_train_epochs=2.0 \
   --max_seq_length=384 \
