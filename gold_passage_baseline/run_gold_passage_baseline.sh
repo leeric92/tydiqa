@@ -27,7 +27,7 @@ MBERT_MODEL_DIR="${HOME}/multi_cased_L-12_H-768_A-12"
 # IMPORTANT: Please report this task name in your results tables as
 # 'TyDiQA-GoldP' to avoid confusing it with the primary tasks.
 TYDIQA_GOLDP_DIR="${HOME}/tydiqa_goldp"
-VERSION="v1.0b"
+VERSION="v1.0"
 
 python $BERT_CODE_DIR/run_squad.py \
   --vocab_file="${MBERT_MODEL_DIR}/vocab.txt" \
@@ -38,7 +38,7 @@ python $BERT_CODE_DIR/run_squad.py \
   --train_file="${TYDIQA_GOLDP_DIR}/tydiqa-goldp-train-${VERSION}.json" \
   --do_predict=True \
   --predict_file="${TYDIQA_GOLDP_DIR}/tydiqa-goldp-dev-${VERSION}.json" \
-  --train_batch_size=12 \
+  --train_batch_size=2 \
   --learning_rate=3e-5 \
   --num_train_epochs=2.0 \
   --max_seq_length=384 \
